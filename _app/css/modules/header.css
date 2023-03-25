@@ -1,0 +1,10 @@
+.header__container {
+	display: flex;
+	justify-content: center;
+
+	background: greenyellow;
+}
+
+.header__headline {
+	padding: 1rem;
+}
