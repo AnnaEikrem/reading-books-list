@@ -1,3 +1,3 @@
-import Module from './modules/module.js';
+import renderBooksList from './modules/renderBooksList.js';
 
-Module();
+renderBooksList();
