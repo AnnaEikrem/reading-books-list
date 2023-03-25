@@ -1,0 +1,24 @@
+.books__list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.book__card {
+	margin: 0.5rem;
+	padding: 0.8rem;
+	background: #57C5B6;
+}
+
+.book__title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+/* .book__image {
+	
+} */
+
+.book__author {
+	/* color: #159895; */
+	color: #fff;
+}
