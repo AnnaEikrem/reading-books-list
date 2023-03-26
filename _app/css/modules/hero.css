@@ -1,0 +1,27 @@
+.hero__section {
+	padding: 2rem 5rem;
+}
+
+.hero__card {
+	position: relative;
+}
+
+.hero__image {
+	width: 100%;
+	opacity: 90%;
+}
+.hero__text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 20%;
+	right: 20%;
+	top: 35%;
+	bottom: 35%;
+	padding: 3rem;
+	opacity: 70%;
+	color: #fff;
+	font-size: 1.5rem;
+	background: rgb(9, 41, 82);
+}

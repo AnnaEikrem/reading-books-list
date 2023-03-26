@@ -1,6 +1,7 @@
-@import './reset.css';
-@import './variables.css';
-@import './base.css';
+@import '/_app/css/reset.css';
+@import '/_app/css/variables.css';
+@import '/_app/css/base.css';
 
-@import './modules/header.css';
-@import './modules/books-list.css';
+@import '/_app/css/modules/header.css';
+@import '/_app/css/modules/hero.css';
+@import '/_app/css/modules/books-list.css';
