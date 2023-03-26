@@ -1,10 +1,27 @@
 .header__container {
-	display: flex;
-	justify-content: center;
+	background: #146C94;
+}
 
-	background: #002B5B;
+.header__content {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+
+.header__navigation {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.navigation__item {
+	color: #fff;
+	margin: 0.8rem;
+	list-style: none;
 }
 
 .header__headline {
-	padding: 1rem;
+	color: #fff;
+	padding: 2rem;
 }
