@@ -10,13 +10,16 @@
 }
 
 .book__title {
+	margin: 1rem;
 	font-size: 1.5rem;
 	font-weight: 600;
 }
 
-/* .book__image {
-	
-} */
+.book__cover {
+	width: 100%;
+	padding: 0.5rem;
+	/* height: 1%; */
+}
 
 .book__author {
 	/* color: #159895; */

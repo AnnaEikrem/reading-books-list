@@ -12,25 +12,25 @@ export default function renderBooksList() {
 	function renderHTML(book) {
 		const title = book.title;
 		const author = book.author;
+		const bookUrl = book.coverUrl;
 
 		const bookCard = document.createElement('div');
 		const bookTitle = document.createElement('div');
-		// const bookImage = document.createElement('img');
+		const bookCover = document.createElement('img');
 		const bookAuthor = document.createElement('div');
 
 		bookCard.className = 'book__card';
 		bookTitle.classList.add('book__title');
-		// bookImage.classList.add('book__image');
+		bookCover.classList.add('book__cover');
 		bookAuthor.classList.add('book__author');
 
-
 		bookTitle.innerText = title;
-		// bookImage.setAttribute('src', )
+		bookCover.setAttribute('src', bookUrl);
 		bookAuthor.innerText = author;
 
 		booksListContainer.appendChild(bookCard);
 		bookCard.appendChild(bookTitle);
-		// bookCard.appendChild(bookImage);
+		bookCard.appendChild(bookCover);
 		bookCard.appendChild(bookAuthor);
 
 	}
