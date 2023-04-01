@@ -189,5 +189,15 @@ export const booksData = [
 		genre: "classic",
 		summary: "Celie, a young African-American woman, overcomes abuse, oppression, and bigotry to find love, empowerment, and self-discovery.",
 		coverUrl: 'https://i.etsystatic.com/11749085/r/il/9a296d/1913226742/il_570xN.1913226742_pn9h.jpg'
-	}
+	},
+	{
+		id: 20,
+		title: "Sapiens: A Brief History of Humankind",
+		author: "Yuval Noah Harari",
+		year: 2014,
+		pages: 498,
+		genre: "history",
+		summary: "In this international bestseller, Yuval Noah Harari explores the history of Homo sapiens, from the emergence of our species in Africa to the present day. He examines the key events and developments that have shaped our history, and argues that the success of Homo sapiens can be attributed to our ability to create and believe in shared myths and stories. Harari's provocative and thought-provoking book has been praised for its engaging writing style and its ability to challenge readers' assumptions about human nature and history.",
+		coverUrl: "https://s1.adlibris.com/images/17322680/sapiens-a-brief-history-of-humankind.jpg"
+  },
 ]

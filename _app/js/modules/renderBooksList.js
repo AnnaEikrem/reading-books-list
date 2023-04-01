@@ -2,12 +2,11 @@ import { booksData } from './booksData.js';
 
 export default function renderBooksList() {
 	const books = booksData;
-	const booksListContainer = document.querySelector('.books__list');
+	const booksListContainer = document.querySelector('.books__cards--list');
 
 	books.forEach(book => {
 		renderHTML(book);
 	})
-
 
 	function renderHTML(book) {
 		const title = book.title;
@@ -36,5 +35,4 @@ export default function renderBooksList() {
 	}
 
 
-	console.log(books)
 }
