@@ -1,0 +1,12 @@
+.genre__button {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border: none;
+	font-size: 1rem;
+}
+
+.genre__button:hover {
+	cursor: pointer;
+	background: rgb(109, 109, 211);
+	transition: 0.5s;
+}
