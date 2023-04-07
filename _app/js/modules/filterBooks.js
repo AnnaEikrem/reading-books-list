@@ -5,7 +5,7 @@ export default function filterBooks(books) {
 	const booksListContainer = document.querySelector('.books__cards--list');
 	const filterButtonContainer = document.querySelector('.books__genre--buttons');
 	const booksGenres = books
-		.map(book => book.genre);
+		.map(book => book.genreName);
 	const uniqueGenres = [...new Set(booksGenres)].sort();
 
 	if(filterButtonContainer) {
@@ -19,14 +19,6 @@ export default function filterBooks(books) {
 
 		toggleClass(allFilterButtons, currentFilterButton);
 		applyGenreFilter(currentGenre);
-		// filterBooksByGenre(currentGenre);
-
-		// if (filteredBooks.length > 0 && filteredBooks[0].genre === currentGenre) {
-		// 	filteredBooks = [];
-		// 	renderBooksList(books);
-		// } else {
-		// 	filterBooks(currentGenre);
-		// }
 	}
 
 	function toggleClass(allFilterButtons, currentFilterButton) {
@@ -38,47 +30,41 @@ export default function filterBooks(books) {
 	}		
 
 	function applyGenreFilter(currentGenre) {
-		if (filteredBooks.length > 0 && filteredBooks[0].genre === currentGenre) {
-			filteredBooks = [];
-			renderBooksList(books);
-		} else {
-
 			switch (currentGenre) {
 				case 'Classic':
-				  filteredBooks = books.filter(book => book.genre === 'Classic');
+				  filteredBooks = books.filter(book => book.genreName === 'Classic');
 				  break;
 	
 				case 'Dystopian':
-				  filteredBooks = books.filter(book => book.genre === 'Dystopian');
+				  filteredBooks = books.filter(book => book.genreName === 'Dystopian');
+
 				  break;
 	
 				case 'Fantasy':
-				  filteredBooks = books.filter(book => book.genre === 'Fantasy');
+				  filteredBooks = books.filter(book => book.genreName === 'Fantasy');
 				  break;
 	
 				case 'History':
-				  filteredBooks = books.filter(book => book.genre === 'History');
+				  filteredBooks = books.filter(book => book.genreName === 'History');
 				  break;
 	
 				case 'Science fiction':
-				  filteredBooks = books.filter(book => book.genre === 'Science fiction');
+				  filteredBooks = books.filter(book => book.genreName === 'Science fiction');
 				  break;
 	
 				case 'Self-development':
-	
-				  filteredBooks = books.filter(book => book.genre === 'Self-development');
+				  filteredBooks = books.filter(book => book.genreName === 'Self-development');
 				  break;
 	
 				default:
-				  filteredBooks = [];
-				  renderBooksList(books);
+				  filteredBooks = books;
 				  break;
 			}
 
 			booksListContainer.innerText = '';
 			renderBooksList(filteredBooks);
 		 }
-	}
+	// }
 
 	function renderGenreButtons() {
 		uniqueGenres.forEach(genre => {
@@ -91,4 +77,15 @@ export default function filterBooks(books) {
 		})
 	}
 }
+
+
+
+		// filterBooksByGenre(currentGenre);
+
+		// if (filteredBooks.length > 0 && filteredBooks[0].genre === currentGenre) {
+		// 	filteredBooks = [];
+		// 	renderBooksList(books);
+		// } else {
+		// 	filterBooks(currentGenre);
+		// }
 	

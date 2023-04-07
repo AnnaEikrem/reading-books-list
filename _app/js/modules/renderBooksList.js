@@ -1,7 +1,4 @@
-import { booksData } from './booksData.js';
-
-export default function renderBooksList() {
-	const books = booksData;
+export default function renderBooksList(books) {
 	const booksListContainer = document.querySelector('.books__cards--list');
 
 	books.forEach(book => {
