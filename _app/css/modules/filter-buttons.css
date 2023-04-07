@@ -5,8 +5,16 @@
 	font-size: 1rem;
 }
 
-.genre__button:hover {
-	cursor: pointer;
-	background: rgb(109, 109, 211);
-	transition: 0.5s;
+
+@media screen and (min-width: 615px) {
+	.filtered__book--active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+	.genre__button:hover {
+		cursor: pointer;
+		background: rgb(109, 109, 211);
+		/* transition: 0.5s; */
+	}
 }

@@ -1,84 +1,94 @@
 import renderBooksList from './renderBooksList.js';
 
 export default function filterBooks(books) {
+	let filteredBooks = [];
 	const booksListContainer = document.querySelector('.books__cards--list');
 	const filterButtonContainer = document.querySelector('.books__genre--buttons');
-	const booksGenres = books.map(book => book.genre);
-	const uniqueGenres = [...new Set(booksGenres)];
+	const booksGenres = books
+		.map(book => book.genre);
+	const uniqueGenres = [...new Set(booksGenres)].sort();
 
 	if(filterButtonContainer) {
-		renderGenreButtons(uniqueGenres);
+		renderGenreButtons();
 	}
 
-	function buttonDOMElement(genre) {
-		genre.forEach(button => {
-			const genreButton = document.createElement('button');
-			genreButton.classList.add('genre__button');
-			genreButton.innerText = genre;
+	function handleButtonElementClick(event) {
+		const currentGenre = event.target.innerText;
+		const currentFilterButton = event.target;
+		const allFilterButtons = event.target.parentElement.querySelectorAll('button');
 
-			filterButtonContainer.appendChild(genreButton);
+		toggleClass(allFilterButtons, currentFilterButton);
+		applyGenreFilter(currentGenre);
+		// filterBooksByGenre(currentGenre);
 
-			return genreButton;
-		})
-		console.log(genre);
+		// if (filteredBooks.length > 0 && filteredBooks[0].genre === currentGenre) {
+		// 	filteredBooks = [];
+		// 	renderBooksList(books);
+		// } else {
+		// 	filterBooks(currentGenre);
+		// }
 	}
 
+	function toggleClass(allFilterButtons, currentFilterButton) {
+		allFilterButtons.forEach(button => {
+			button.classList.remove('filtered__book--active')
+		});
 
-	function renderGenreButtons(genres) {
-		for(let i = 0; i < genres.length; i++) {
-			const genreButtonElement = buttonDOMElement(uniqueGenres[i]);
-			// filterButtonContainer.appendChild(genreButtonElement);
+		currentFilterButton.classList.add('filtered__book--active');
+	}		
 
-			// console.log(genres);
-		}
-	}
+	function applyGenreFilter(currentGenre) {
+		if (filteredBooks.length > 0 && filteredBooks[0].genre === currentGenre) {
+			filteredBooks = [];
+			renderBooksList(books);
+		} else {
 
-
-
-
-	// console.log(uniqueGenres);
-	// console.log(books);
-
-}
-
-
-
-
-	// function returnDOMElement(button) {
-	// 	const genreButtonElement = document.createElement('button');
-	// 	genreButtonElement.classList.add('genre__button');
-	// 		genreButtonElement.textContent = button[i];
-	// 		filterButtonContainer.appendChild(genreButtonElement);
-			
-	// 		const genreButtons = document.querySelectorAll('.genre__button'); 
-
-	// 	genreButtons.forEach((button) => {
-	// 		button.addEventListener('click', handleButtonClick);
-	// 	})
-	// }
-
+			switch (currentGenre) {
+				case 'Classic':
+				  filteredBooks = books.filter(book => book.genre === 'Classic');
+				  break;
 	
+				case 'Dystopian':
+				  filteredBooks = books.filter(book => book.genre === 'Dystopian');
+				  break;
+	
+				case 'Fantasy':
+				  filteredBooks = books.filter(book => book.genre === 'Fantasy');
+				  break;
+	
+				case 'History':
+				  filteredBooks = books.filter(book => book.genre === 'History');
+				  break;
+	
+				case 'Science fiction':
+				  filteredBooks = books.filter(book => book.genre === 'Science fiction');
+				  break;
+	
+				case 'Self-development':
+	
+				  filteredBooks = books.filter(book => book.genre === 'Self-development');
+				  break;
+	
+				default:
+				  filteredBooks = [];
+				  renderBooksList(books);
+				  break;
+			}
 
+			booksListContainer.innerText = '';
+			renderBooksList(filteredBooks);
+		 }
+	}
 
-	// function handleButtonClick(event) {
-	// 	const selectedGenre = event.target.textContent.toLowerCase();
-	// 	filterBooksByGenre(selectedGenre)
-	// }
+	function renderGenreButtons() {
+		uniqueGenres.forEach(genre => {
+			const buttonElement = document.createElement('button');
+			buttonElement.classList.add('genre__button');
+			buttonElement.textContent = genre;
+			filterButtonContainer.appendChild(buttonElement);
 
-	// function filterBooksByGenre(genre) {
-	// 	const bookCards = document.querySelectorAll('.book__card');
-
-	// 	bookCards.forEach((bookCard) => {
-	// 		const bookGenre = bookCard.dataset.genre;
-
-	// 		if(bookGenre === genre || genre === 'all') {
-	// 			bookCard.style.display = 'block';
-	// 		} else {
-	// 			bookCard.style.display = 'none';
-	// 		}
-
-	// 	});
-	// }
-
-	// filterBooksByGenre('all');
-	// renderBooksList(books);
+			buttonElement.addEventListener('click', handleButtonElementClick);
+		})
+	}
+}
+	
