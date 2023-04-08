@@ -1,12 +1,33 @@
+.books__list--section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.books__list--headline {
+	font-size: 2.5rem;
+}
+
+.books__genre--buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* justify-content: right; */
+}
+
 .books__cards--list {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 }
 
 .book__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin: 0.5rem;
 	padding: 0.8rem;
-	background: #655DBB;
+	border-radius: 0.5rem;
+	background: #146C94;
 }
 
 .book__title {
@@ -24,4 +45,24 @@
 .book__author {
 	/* color: #159895; */
 	color: #fff;
+}
+
+@media screen and (min-width: 615px) {
+	.books__cards--list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.books__genre--buttons {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		/* justify-content: right; */
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.books__cards--list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
 }

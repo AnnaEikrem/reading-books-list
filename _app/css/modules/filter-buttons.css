@@ -14,7 +14,8 @@
 
 	.genre__button:hover {
 		cursor: pointer;
-		background: rgb(109, 109, 211);
+		background: rgb(9, 41, 82);
+		/* opacity: 50%; */
 		/* transition: 0.5s; */
 	}
 }

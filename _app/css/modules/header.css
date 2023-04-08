@@ -69,7 +69,7 @@
 	}
 
 	.navigation__item:hover {
-		background:#2cbcff;
+		background: rgb(9, 41, 82);
 		transition: 0.4s;
 	}
 
