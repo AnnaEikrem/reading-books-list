@@ -1,9 +1,3 @@
-/* .book__card, .book__cover {
-	max-height: 50rem;
-	max-width: 100%;
-	object-fit: cover;
-} */
-
 .books__list--section {
 	display: flex;
 	flex-direction: column;
@@ -27,7 +21,7 @@
 	align-items: center;
 	margin: 0.5rem;
 	padding: 0.8rem;
-	background: rgb(28, 183, 207);
+	background: #A5D7E8;
 }
 
 .book__title {
