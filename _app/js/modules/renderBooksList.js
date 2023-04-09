@@ -25,8 +25,8 @@ export default function renderBooksList(books) {
 		bookAuthor.innerText = author;
 
 		booksListContainer.appendChild(bookCard);
-		bookCard.appendChild(bookTitle);
 		bookCard.appendChild(bookCover);
+		bookCard.appendChild(bookTitle);
 		bookCard.appendChild(bookAuthor);
 
 	}

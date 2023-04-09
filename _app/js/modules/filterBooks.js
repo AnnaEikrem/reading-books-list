@@ -64,10 +64,19 @@ export default function filterBooks(books) {
 			booksListContainer.innerText = '';
 			renderBooksList(filteredBooks);
 		 }
-	// }
-
+		 
 	function renderGenreButtons() {
-		uniqueGenres.forEach(genre => {
+		const allButtonElement = document.createElement('button');
+   	allButtonElement.classList.add('genre__button');
+    	allButtonElement.textContent = 'All';
+    	filterButtonContainer.appendChild(allButtonElement);
+
+    	allButtonElement.addEventListener('click', () => {
+      toggleClass(filterButtonContainer.querySelectorAll('button'), allButtonElement);
+      applyGenreFilter('All');
+    });
+
+	 uniqueGenres.forEach(genre => {
 			const buttonElement = document.createElement('button');
 			buttonElement.classList.add('genre__button');
 			buttonElement.textContent = genre;
@@ -77,15 +86,3 @@ export default function filterBooks(books) {
 		})
 	}
 }
-
-
-
-		// filterBooksByGenre(currentGenre);
-
-		// if (filteredBooks.length > 0 && filteredBooks[0].genre === currentGenre) {
-		// 	filteredBooks = [];
-		// 	renderBooksList(books);
-		// } else {
-		// 	filterBooks(currentGenre);
-		// }
-	
