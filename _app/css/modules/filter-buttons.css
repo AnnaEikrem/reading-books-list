@@ -1,21 +1,39 @@
+.books__genre--buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 100%;
+	padding: 1rem;
+}
+
 .genre__button {
+	display: flex;
+	justify-content: left;
 	margin: 0.5rem;
 	padding: 0.5rem;
-	border: none;
+	/* border: none; */
 	font-size: 1rem;
 }
 
-
-@media screen and (min-width: 615px) {
+@media screen and (min-width: 600px) {
 	.filtered__book--active {
 		text-decoration: underline;
 		font-weight: bold;
 	}
 
+	.books__genre--buttons {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
 	.genre__button:hover {
 		cursor: pointer;
-		background: rgb(9, 41, 82);
-		/* opacity: 50%; */
-		/* transition: 0.5s; */
+		background: rgb(131, 185, 255);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.books__genre--buttons {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 	}
 }

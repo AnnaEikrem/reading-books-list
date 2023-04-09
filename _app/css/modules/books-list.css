@@ -1,3 +1,9 @@
+/* .book__card, .book__cover {
+	max-height: 50rem;
+	max-width: 100%;
+	object-fit: cover;
+} */
+
 .books__list--section {
 	display: flex;
 	flex-direction: column;
@@ -9,15 +15,10 @@
 	font-size: 2.5rem;
 }
 
-.books__genre--buttons {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	/* justify-content: right; */
-}
-
 .books__cards--list {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
+	width: 85%;
 }
 
 .book__card {
@@ -26,8 +27,7 @@
 	align-items: center;
 	margin: 0.5rem;
 	padding: 0.8rem;
-	border-radius: 0.5rem;
-	background: #146C94;
+	background: rgb(28, 183, 207);
 }
 
 .book__title {
@@ -38,12 +38,11 @@
 
 .book__cover {
 	width: 100%;
-	padding: 0.5rem;
-	/* height: 1%; */
+	height: 100%;
+	padding: 1rem;
 }
 
 .book__author {
-	/* color: #159895; */
 	color: #fff;
 }
 
@@ -51,12 +50,16 @@
 	.books__cards--list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		width: 95%;
 	}
 
-	.books__genre--buttons {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		/* justify-content: right; */
+	.book__card {
+		margin: 0.8rem;
+	}
+
+	.book__cover {
+		width: 100%;
+		padding: 0.5rem;
 	}
 }
 
@@ -64,5 +67,16 @@
 	.books__cards--list {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		width: 95%;
+	}
+
+	.book__card {
+		margin: 1rem;
+	}
+
+	.book__cover {
+		width: 100%;
+		/* height: 20rem; */
+		padding: 0.5rem;
 	}
 }
