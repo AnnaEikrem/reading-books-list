@@ -4,3 +4,4 @@ Features:
 	- Toggle navigation
 	- Filtering buttons
 	- Rendered list of books
+	- Search function (work in progress)
