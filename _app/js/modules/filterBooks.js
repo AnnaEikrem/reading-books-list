@@ -1,10 +1,5 @@
 import renderBooksList from './renderBooksList.js';
 
-/**
- * @todo Fix search function to render a list, where the links lead to another index.html file.
- * @todo	Make the filterButtons in to a select, with options in mobile version
- */
-
 export default function filterBooks(books) {
 	let filteredBooks = [];
 	const booksListContainer = document.querySelector('.books__cards--list');

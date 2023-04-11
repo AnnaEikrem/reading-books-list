@@ -1,3 +1,10 @@
+/**
+ * @todo Fix search function to render a list, where the links lead to another index.html file.
+ * @todo	Make the filterButtons in to a select, with options in mobile version.
+ * @todo Fix so the 'close' button removes when the search section is closed.
+ */
+
+
 export default function searchFilter(books) {
 	const searchFieldAnchor = document.querySelector('.header__container');
 	const inputResultsContainer = document.querySelector('.navigation__input--content');
