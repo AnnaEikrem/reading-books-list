@@ -1,6 +1,6 @@
 A web application created with HTML, CSS and Javascript. This far, the website displays a simple layout with a hero section, and a books list. 
 
-Features: 
+Features:
 	- Toggle navigation.
 	- Rendered list of books.
 	- Filtering buttons.
