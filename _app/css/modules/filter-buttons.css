@@ -14,6 +14,15 @@
 	border: 1px solid #a5a5a5
 }
 
+.close__filter--button {
+	display: block;
+	padding: 0.3rem 0.8rem;
+}
+
+.close__filter--button--hidden {
+	display: none;
+}
+
 @media screen and (min-width: 600px) {
 	.filtered__book--active {
 		text-decoration: underline;
