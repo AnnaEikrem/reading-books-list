@@ -1,7 +1,6 @@
 /**
  * @todo Fix search function to render a list, where the links lead to another index.html file.
  * @todo	Make the filterButtons in to a select, with options in mobile version.
- * @todo Fix so the 'close' button removes when the search section is closed.
  */
 
 
@@ -27,7 +26,6 @@ export default function searchFilter(books) {
 
 		newBooksData.forEach(book => {
 			if (book.title.toLowerCase().includes(inputTerm) || book.author.toLowerCase().includes(inputTerm)) {
-
 				const listItem = document.createElement('li');
 				const bookLink = document.createElement('a');
 				const bookTitle = book.title;
@@ -36,7 +34,6 @@ export default function searchFilter(books) {
 
 				bookLink.innerText = `${bookTitle}  by ${bookAuthor}`;
 				listItem.classList.add('input__result--item');
-				bookLink.setAttribute('target', '_blank');
 				bookLink.href = `/_app/book-preview/index.html/${book.id}`;
 
 				listItem.appendChild(bookLink);
@@ -51,9 +48,10 @@ export default function searchFilter(books) {
 
 		function handleCloseFilterButtonClick() {
 			inputResultsContainer.removeChild(inputResultsList);
+			closeFilterButton.remove('close__filter--button');
+			closeFilterButton.add('close__filter--button--hidden');
 		}
 			
-
 		if(inputResultsContainer) {
 			inputResultsList.classList.add('input__result--items');
 			inputResultsContainer.innerHTML = '';
