@@ -34,6 +34,7 @@ export default function searchFilter(books) {
 				bookLink.innerText = `${bookTitle}  by ${bookAuthor}`;
 				listItem.classList.add('input__result--item');
 				bookLink.href = `/_app/book-preview/index.html/${book.id}`;
+				bookLink.classList.add('result__item--link')
 
 				listItem.appendChild(bookLink);
 				inputResultsList.appendChild(listItem);
