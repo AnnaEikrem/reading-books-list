@@ -11,7 +11,11 @@
 .input__result--item {
 	border: 1px solid #000;
 	background: rgb(208, 225, 255);
-	padding: 0.3rem;
+	padding: 0.5rem 0;
+}
+
+.result__item--link {
+	color: #000;
 }
 
 .navigation__input--content {
