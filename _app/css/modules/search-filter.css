@@ -1,8 +1,6 @@
 .input__results--display {
 	width: 100%;
 	height: 50vh;
-
-	background: #fff;
 }
 
 .input__result--items {
@@ -12,10 +10,28 @@
 
 .input__result--item {
 	border: 1px solid #000;
-	background: rgb(255, 241, 241);
-	padding: 0.2rem;
+	background: rgb(208, 225, 255);
+	padding: 0.3rem;
 }
 
 .navigation__input--content {
 	background: #fff;
 }
+
+/* Results section */
+.close__filter--button {
+	display: block;
+	padding: 0.3rem 0.8rem;
+}
+
+.close__filter--button--hidden {
+	display: none;
+}
+
+@media screen and (min-width: 615px) {
+	.input__result--item:hover {
+		transition: 0.4s;
+		background: #A5D7E8;
+	}
+}
+

@@ -3,7 +3,6 @@
  * @todo	Make the filterButtons in to a select, with options in mobile version.
  */
 
-
 export default function searchFilter(books) {
 	const searchFieldAnchor = document.querySelector('.header__container');
 	const inputResultsContainer = document.querySelector('.navigation__input--content');

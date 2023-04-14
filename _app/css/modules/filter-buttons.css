@@ -14,15 +14,6 @@
 	border: 1px solid #a5a5a5
 }
 
-.close__filter--button {
-	display: block;
-	padding: 0.3rem 0.8rem;
-}
-
-.close__filter--button--hidden {
-	display: none;
-}
-
 @media screen and (min-width: 600px) {
 	.filtered__book--active {
 		text-decoration: underline;
@@ -37,7 +28,7 @@
 	.genre__button:hover {
 		cursor: pointer;
 		transition: 0.4s;
-		background: #A5D7E8;
+		background: rgb(208, 225, 255);
 	}
 }
 
