@@ -94,6 +94,12 @@
 		height: fit-content;
 	}
 
+	.header__navigation--links {
+		display: flex;
+		flex-direction: row;
+	}
+
+
 	.navigation__item:hover {
 		background: rgb(9, 41, 82);
 		transition: 0.4s;
@@ -135,5 +141,5 @@
 }
 
 @media screen and (min-width: 768px) {
-
+	
 }
