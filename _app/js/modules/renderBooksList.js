@@ -12,12 +12,14 @@ export default function renderBooksList(books) {
 
 		const linkElement = document.createElement('a');
 		const bookCard = document.createElement('div');
+		const bookCardText = document.createElement('div');
 		const bookTitle = document.createElement('div');
 		const bookCover = document.createElement('img');
 		const bookAuthor = document.createElement('div');
 
 		linkElement.classList.add('book__item--link');
 		bookCard.className = 'book__card';
+		bookCardText.classList.add('book__text--container')
 		bookTitle.classList.add('book__title');
 		bookCover.classList.add('book__cover');
 		bookAuthor.classList.add('book__author');
@@ -31,8 +33,9 @@ export default function renderBooksList(books) {
 		booksListContainer.appendChild(linkElement);
 		linkElement.appendChild(bookCard)
 		bookCard.appendChild(bookCover);
-		bookCard.appendChild(bookTitle);
-		bookCard.appendChild(bookAuthor);
+		bookCard.appendChild(bookCardText);
+		bookCardText.appendChild(bookTitle);
+		bookCardText.appendChild(bookAuthor);
 
 		return linkElement;
 	}

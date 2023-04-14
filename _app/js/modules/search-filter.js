@@ -49,7 +49,10 @@ export default function searchFilter(books) {
 		function handleCloseFilterButtonClick() {
 			inputResultsContainer.removeChild(inputResultsList);
 			closeFilterButton.remove('close__filter--button');
-			closeFilterButton.add('close__filter--button--hidden');
+
+			if (closeFilterButton) {
+				closeFilterButton.add('close__filter--button--hidden');
+			}
 		}
 			
 		if(inputResultsContainer) {
