@@ -1,9 +1,11 @@
 export default function renderBooksList(books) {
 	const booksListContainer = document.querySelector('.books__cards--list');
 
-	books.forEach(book => {
-		renderHTML(book);
-	})
+	if (booksListContainer) {
+		books.forEach(book => {
+			renderHTML(book);
+		})
+	}
 
 	function renderHTML(book) {
 		const title = book.title;
@@ -18,14 +20,13 @@ export default function renderBooksList(books) {
 		const bookAuthor = document.createElement('div');
 
 		linkElement.classList.add('book__item--link');
-		bookCard.className = 'book__card';
+		bookCard.classList.add('book__card');
 		bookCardText.classList.add('book__text--container')
 		bookTitle.classList.add('book__title');
 		bookCover.classList.add('book__cover');
 		bookAuthor.classList.add('book__author');
 
-		linkElement.setAttribute('href', '/_app/book-preview/index.html');
-		linkElement.setAttribute('target', '_blank');
+		linkElement.setAttribute('href', `/_app/book-preview/index.html?book=${book.slug}`);
 		bookTitle.innerText = title;
 		bookCover.setAttribute('src', bookUrl);
 		bookAuthor.innerText = author;
@@ -36,9 +37,7 @@ export default function renderBooksList(books) {
 		bookCard.appendChild(bookCardText);
 		bookCardText.appendChild(bookTitle);
 		bookCardText.appendChild(bookAuthor);
-
+		
 		return linkElement;
 	}
-
-
 }
