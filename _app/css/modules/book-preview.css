@@ -1,0 +1,18 @@
+.books__preview--section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.book__preview--card {
+	padding: 2rem;
+}
+
+.preview__image {
+	display: flex;
+	justify-content: center;
+}
+
+.preview__image--source {
+	width: 30%;
+}
