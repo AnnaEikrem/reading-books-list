@@ -15,6 +15,8 @@ export default function bookPreview(books) {
 		const bookSummary = book.summary;
 		const bookUrl = book.coverUrl;
 
+		// console.log(book)
+
 		const bookPreview = document.createElement('div');
 		const titleElement = document.createElement('h3');
 		const authorElement = document.createElement('div');
@@ -36,14 +38,16 @@ export default function bookPreview(books) {
 		summaryElement.classList.add('preview__summary');
 
 		titleElement.textContent = bookTitle;
-		authorElement.textContent = bookAuthor;
+		authorElement.textContent = `Written by: ${bookAuthor}`;
 		imageElementSource.setAttribute('src', bookUrl);
-		pagesElement.textContent = bookPages;
-		yearElement.textContent = bookYear;
+		pagesElement.textContent = `Pages: ${bookPages}`;
+		yearElement.textContent = `From: ${bookYear}`;
 		summaryElement.textContent = bookSummary;
 
 		bookPreview.appendChild(titleElement);
 		bookPreview.appendChild(authorElement);
+		bookPreview.appendChild(imageElement);
+		imageElement.appendChild(imageElementSource);
 		bookPreview.appendChild(informationContainerElement);
 		informationContainerElement.appendChild(pagesElement);
 		informationContainerElement.appendChild(yearElement);
