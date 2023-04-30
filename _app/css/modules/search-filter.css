@@ -28,9 +28,6 @@
 	padding: 0.3rem 0.8rem;
 }
 
-.close__filter--button--hidden {
-	display: none;
-}
 
 @media screen and (min-width: 615px) {
 	.input__result--item:hover {
