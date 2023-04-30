@@ -19,6 +19,7 @@
 	margin: 0.5rem;
 	padding: 0.8rem;
 	background: rgb(208, 225, 255);
+	color: #000;
 }
 
 .book__card {
@@ -46,7 +47,6 @@
 
 .book__author {
 	font-size: 1rem;
-	color: #fff;
 }
 
 @media screen and (min-width: 615px) {
