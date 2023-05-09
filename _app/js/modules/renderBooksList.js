@@ -29,6 +29,7 @@ export default function renderBooksList(books) {
 		linkElement.setAttribute('href', `/_app/book-preview/index.html?book=${book.slug}`);
 		bookTitle.innerText = title;
 		bookCover.setAttribute('src', bookUrl);
+		bookCover.setAttribute('alt', book.altText)
 		bookAuthor.innerText = author;
 
 		booksListContainer.appendChild(linkElement);
